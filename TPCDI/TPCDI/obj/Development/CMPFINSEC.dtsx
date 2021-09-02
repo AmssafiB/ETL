@@ -1,0 +1,374 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/24/2020 11:40:03 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-E6NMTTA"
+  DTS:CreatorName="DESKTOP-E6NMTTA\amssafi"
+  DTS:DTSID="{1BF0BB83-9695-4FEB-BD72-75B7E4D826D4}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.132"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{79FC5114-3507-43B6-890B-3B5A4B9D9852}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[FINW]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4DCAEADD-F333-4BB7-BF08-2E1AF38761EC}"
+      DTS:ObjectName="FINW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="path">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="19670101-154842CMPkkhSvCsfgbDUvsiZWtPQwjkYPwKrfTUFMGMCWCBXBcOcTkaLSudO        0000000000ACTVDRA   1886072219918 Rogers North                                                                                                                                              35233       Long Beach               NC                  United States of AmericaEllebracht                                     CUpESkLIQ LBcTnhDEOCLVhfDjOopGKRBxRYGboIrPFcDxMSGkskSwAJdAPWSAPTf T                                                                                  "
+              DTS:DTSID="{D9AAF3AC-2739-4FCD-9B4E-27DCD4D46FC3}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File - FINWIRE]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Flat File - FINWIRE"
+      DTS:DTSID="{C3D402A4-190C-42C9-878B-A64691699FD0}"
+      DTS:ObjectName="Flat File - FINWIRE">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[User::FilePath]</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="RaggedRight"
+          DTS:LocaleID="2060"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter="_x000D__x000A_"
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="15"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
+              DTS:ObjectName="PTS"
+              DTS:DTSID="{59A2CCB9-6884-45E2-9CF8-B3A43AADFC1D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnDelimiter=""
+              DTS:ColumnWidth="3"
+              DTS:MaximumWidth="3"
+              DTS:DataType="129"
+              DTS:ObjectName="RecType"
+              DTS:DTSID="{A19DB1ED-8EB6-4139-884B-C8AD24F16F21}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="550"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AllData"
+              DTS:DTSID="{A898B8B3-EF2F-49D9-90DE-D819023CB64A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat file - Industry]"
+      DTS:CreationName="FLATFILE"
+      DTS:Description="Flat file - Industry"
+      DTS:DTSID="{0BA53E82-66A6-4539-8008-E9596E1CBE28}"
+      DTS:ObjectName="Flat file - Industry">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="2060"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Users\Public\Documents\TPC-DI\Batch1\Industry.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IN_ID"
+              DTS:DTSID="{909CFA11-2E9A-4797-B52F-FE895CCF28B4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x007C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IN_NAME"
+              DTS:DTSID="{19BA1812-93EF-4169-BD0B-D96748F0FD74}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IN_SC_ID"
+              DTS:DTSID="{007AFB59-BAF6-4780-84AB-4B39E5A1359A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.destination_di]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A88EB27E-AB98-4084-B48C-87C9CDF281D6}"
+      DTS:ObjectName="LocalHost.destination_di">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=destination_di;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.destination_di2]"
+      DTS:CreationName="ADO.NET:System.Data.OleDb.OleDbConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{BA11E565-FE2B-4CF8-A8EE-2B861D5BAD02}"
+      DTS:ObjectName="LocalHost.destination_di2">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=.;Initial Catalog=destination_di;Provider=SQLNCLI11.1;Integrated Security=SSPI;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{2E893536-8D30-47D8-B8A4-E30419772C2D}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="path">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Loop for each files"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Conteneur de boucles Foreach"
+      DTS:DTSID="{cd7f5e5c-6975-4f99-9f44-7cc0badb08a0}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Loop for each files">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{d7deec4a-f81d-4ab8-b813-de531e4c2fe5}"
+        DTS:ObjectName="{1AE81D23-1933-419F-A773-A1EA21631018}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="D:\DWH\Batch1" />
+            <FEFEProperty
+              FileSpec="FINWIRE*Q*" />
+            <FEFEProperty
+              FileNameRetrievalType="0" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables>
+        <DTS:Variable
+          DTS:CreationName=""
+          DTS:DTSID="{cc622542-e5ca-401a-a665-76008a08f8bf}"
+          DTS:IncludeInDebugDump="2345"
+          DTS:Namespace="User"
+          DTS:ObjectName="FileName">
+          <DTS:VariableValue
+            DTS:DataType="8"
+            xml:space="preserve"></DTS:VariableValue>
+        </DTS:Variable>
+      </DTS:Variables>
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Loop for each files\SSIS ForEach Loop Enumerate"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Tâche de flux de données"
+          DTS:DTSID="{51114fb0-b726-447f-86d7-2c6d83698e1c}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="SSIS ForEach Loop Enumerate"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Source du fichier plat;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;1"
+                  description="Source du fichier plat"
+                  localeId="1033"
+                  name="Flat File - FINWIRE"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Spécifie si les colonnes dont la longueur est zéro sont traitées comme des valeurs NULL."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Spécifie le nom d'une colonne de sortie contenant le nom du fichier. Si aucun nom n'est spécifié, aucune colonne de sortie contenant le nom du fichier ne sera générée."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[FINW]"
+                      connectionManagerRefId="Package.ConnectionManagers[FINW]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie de source de fichier plat]"
+                      name="Sortie de source de fichier plat">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie de source de fichier plat].Columns[19670101-154842CMPkkhSvCsfgbDUvsiZWtPQwjkYPwKrfTUFMGMCWCBXBcOcTkaLSudO        0000000000ACTVDRA   1886072219918 Rogers North                                                                                                                                              35233       Long Beach               NC                  United States of AmericaEllebracht                                     CUpESkLIQ LBcTnhDEOCLVhfDjOopGKRBxRYGboIrPFcDxMSGkskSwAJdAPWSAPTf T                                                                                  ]"
+                          codePage="1252"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie de source de fichier plat].ExternalColumns[19670101-154842CMPkkhSvCsfgbDUvsiZWtPQwjkYPwKrfTUFMGMCWCBXBcOcTkaLSudO        0000000000ACTVDRA   1886072219918 Rogers North                                                                                                                                              35233       Long Beach               NC                  United States of AmericaEllebracht                                     CUpESkLIQ LBcTnhDEOCLVhfDjOopGKRBxRYGboIrPFcDxMSGkskSwAJdAPWSAPTf T                                                                                  ]"
+                          length="50"
+                          lineageId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie de source de fichier plat].Columns[19670101-154842CMPkkhSvCsfgbDUvsiZWtPQwjkYPwKrfTUFMGMCWCBXBcOcTkaLSudO        0000000000ACTVDRA   1886072219918 Rogers North                                                                                                                                              35233       Long Beach               NC                  United States of AmericaEllebracht                                     CUpESkLIQ LBcTnhDEOCLVhfDjOopGKRBxRYGboIrPFcDxMSGkskSwAJdAPWSAPTf T                                                                                  ]"
+                          name="19670101-154842CMPkkhSvCsfgbDUvsiZWtPQwjkYPwKrfTUFMGMCWCBXBcOcTkaLSudO        0000000000ACTVDRA   1886072219918 Rogers North                                                                                                                                              35233       Long Beach               NC                  United States of AmericaEllebracht                                     CUpESkLIQ LBcTnhDEOCLVhfDjOopGKRBxRYGboIrPFcDxMSGkskSwAJdAPWSAPTf T                                                                                  "
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie de source de fichier plat].ExternalColumns[19670101-154842CMPkkhSvCsfgbDUvsiZWtPQwjkYPwKrfTUFMGMCWCBXBcOcTkaLSudO        0000000000ACTVDRA   1886072219918 Rogers North                                                                                                                                              35233       Long Beach               NC                  United States of AmericaEllebracht                                     CUpESkLIQ LBcTnhDEOCLVhfDjOopGKRBxRYGboIrPFcDxMSGkskSwAJdAPWSAPTf T                                                                                  ]"
+                          codePage="1252"
+                          dataType="str"
+                          length="50"
+                          name="19670101-154842CMPkkhSvCsfgbDUvsiZWtPQwjkYPwKrfTUFMGMCWCBXBcOcTkaLSudO        0000000000ACTVDRA   1886072219918 Rogers North                                                                                                                                              35233       Long Beach               NC                  United States of AmericaEllebracht                                     CUpESkLIQ LBcTnhDEOCLVhfDjOopGKRBxRYGboIrPFcDxMSGkskSwAJdAPWSAPTf T                                                                                  " />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie d'erreur de source de fichier plat]"
+                      isErrorOut="true"
+                      name="Sortie d'erreur de source de fichier plat">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Colonne de sortie d'erreur de source de fichier plat"
+                          lineageId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie d'erreur de source de fichier plat].Columns[Colonne de sortie d'erreur de source de fichier plat]"
+                          name="Colonne de sortie d'erreur de source de fichier plat" />
+                        <outputColumn
+                          refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE.Outputs[Sortie d'erreur de source de fichier plat].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{1D54DED6-9119-4370-963E-F9011D4305A2}"
+          DTS:ObjectName="{1D54DED6-9119-4370-963E-F9011D4305A2}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::FileName" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="223,43"
+          Id="Package\Loop for each files\SSIS ForEach Loop Enumerate"
+          TopLeft="36.3333301295838,29.9999967455865" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="301,134"
+          Size="301,177"
+          Id="Package\Loop for each files"
+          TopLeft="221,126" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Loop for each files\SSIS ForEach Loop Enumerate">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="169,43"
+          Id="Package\Loop for each files\SSIS ForEach Loop Enumerate\Flat File - FINWIRE"
+          TopLeft="864.637880265663,15.3916666298609" />
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
